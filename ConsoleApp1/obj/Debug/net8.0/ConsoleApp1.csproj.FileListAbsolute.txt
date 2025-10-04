@@ -1,0 +1,15 @@
+E:\uniProjects\pharloom\Pharloom\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.exe
+E:\uniProjects\pharloom\Pharloom\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.deps.json
+E:\uniProjects\pharloom\Pharloom\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.runtimeconfig.json
+E:\uniProjects\pharloom\Pharloom\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.dll
+E:\uniProjects\pharloom\Pharloom\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.pdb
+E:\uniProjects\pharloom\Pharloom\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+E:\uniProjects\pharloom\Pharloom\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.AssemblyInfoInputs.cache
+E:\uniProjects\pharloom\Pharloom\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.AssemblyInfo.cs
+E:\uniProjects\pharloom\Pharloom\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+E:\uniProjects\pharloom\Pharloom\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.sourcelink.json
+E:\uniProjects\pharloom\Pharloom\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.dll
+E:\uniProjects\pharloom\Pharloom\ConsoleApp1\obj\Debug\net8.0\refint\ConsoleApp1.dll
+E:\uniProjects\pharloom\Pharloom\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.pdb
+E:\uniProjects\pharloom\Pharloom\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.genruntimeconfig.cache
+E:\uniProjects\pharloom\Pharloom\ConsoleApp1\obj\Debug\net8.0\ref\ConsoleApp1.dll
