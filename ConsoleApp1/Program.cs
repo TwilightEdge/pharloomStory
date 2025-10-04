@@ -6,6 +6,9 @@ namespace programmingClassFirstSession
     {
         public static string response = "0";
 
+        public static bool rosaries= false;
+
+
         static void Main(string[] args)
         {
             Situation1();
@@ -16,6 +19,7 @@ namespace programmingClassFirstSession
             //string response;
 
             Console.WriteLine("you are in dark and mystical lands of Pharloom, do you want to: ");
+            Console.WriteLine();
             Console.WriteLine("1_ go explore the bone bottom");
             Console.WriteLine("2_ go down into the Moss Groto");
             response = Console.ReadLine();
@@ -61,6 +65,7 @@ namespace programmingClassFirstSession
             //string response;
 
             Console.WriteLine("you continue down the path in the bone bottom, reaching a small gathering of bugs that seems to be pilgrims");
+            Console.WriteLine();
             Console.WriteLine("1_ talk to the bug with a hammer in hand");
             Console.WriteLine("2_ talk to the bug sitting on what apears to be a camp lamp");
             Console.WriteLine();
@@ -107,10 +112,11 @@ namespace programmingClassFirstSession
         static void Situation3()
         {
 
-            //string response;
+
 
 
             Console.WriteLine("you head down to the dark and mysterious tunnels of Moss Groto! you hear a bug singing a sharp from bellow and there are lands to explore in your right, where do you go?");
+            Console.WriteLine();
             Console.WriteLine("1_ go find out where the sound comming from");
             Console.WriteLine("2_ continue to the right to explore more of moss groto");
             Console.WriteLine();
@@ -159,9 +165,60 @@ namespace programmingClassFirstSession
 
         static void Situation4()
         {
-            //string response;
 
-            Console.WriteLine("you approached the bug, he tells you about this place, and asks you if you can donate some shells");
+            Console.WriteLine("you go and meet the builder bug and he tells you that if you hand him over b500 rosaries he can rebuild bone bottom again for the pilgrims to come");
+            Console.WriteLine();
+            Console.WriteLine("1_ give him 500 rosarhes! (need 500 rosaries) ");
+            
+            Console.WriteLine();
+            Console.WriteLine("to go back press [B]ack");
+            response = Console.ReadLine();
+
+            if (response == "1")
+            {
+                if (rosaries == true)
+                {
+                    //vin con
+
+                    Console.WriteLine("ayy now I can rebuild bone bottoom for the new pilgrims! thanks ms spider!!");
+                    Console.WriteLine();
+                    Console.WriteLine("VICTORY");
+                    Console.ReadLine();
+                    Exit();
+                }
+                
+
+
+
+                
+
+
+            }
+            else
+            {
+                if (response == "2")
+                {
+                    // sit 7
+                    Situation7();
+                }
+                else
+                {
+                    if (response == "b" || response == "B")
+                    {
+
+                        //go back to pharloom sit 1
+                        Situation1();
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("please choose one of the numbers to play the gmae!!");
+                        Console.ReadLine();
+                        Situation3();
+                    }
+                }
+            }
+
         }
 
         static void Situation5()
@@ -226,6 +283,11 @@ namespace programmingClassFirstSession
             //string response;
 
 
+        }
+
+        static void Exit()
+        {            
+            Environment.Exit(0);
         }
 
     }
