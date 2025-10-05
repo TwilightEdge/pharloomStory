@@ -33,10 +33,10 @@ namespace programmingClassFirstSession
         {
 
             Menu();
-
+            Situation1();
         }
 
-        static void Situation1() //needs update about the locked door
+        static void Situation1() 
         {
             Devider();
 
@@ -89,10 +89,22 @@ namespace programmingClassFirstSession
                     }
                     else
                     {
-                        Console.WriteLine("please choose one of the options to play the game!!");
 
-                        Console.ReadLine();
-                        Situation1();
+                        if (response == "m" || response == "M")
+                        {
+
+                            PauseMenu();
+                            Situation1();
+
+                        }
+                        else // choose an option!
+                        {
+
+                            Console.WriteLine("please choose one of the options to play the game!!");
+
+                            Console.ReadLine();
+                            Situation1();
+                        }
                     }
 
                 }
@@ -905,18 +917,29 @@ namespace programmingClassFirstSession
             return;
         }
 
+        static void Restart()
+        {
+            Console.Clear();
+            Console.WriteLine();
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine();
+            return;
+        }
+
         static void Menu() // its not functional yet
         {
 
+            Console.Clear();
+
             Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
             Console.WriteLine("|                                                                                                                      |");
-            Console.WriteLine("|                                          WELCOME TO SILK MUSIC!                                                      |");
+            Console.WriteLine("|                                         WELCOME TO SILK MUSIC!                                                       |");
             Console.WriteLine("|                                                                                                                      |");
-            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("|----------------------------------------------------------------------------------------------------------------------|");
             Console.WriteLine("|                                                                                                                      |");
             Console.WriteLine("|                                          P TO [P]LAY THE GAME                                                        |");
             Console.WriteLine("|                                                                                                                      |");
-            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("|----------------------------------------------------------------------------------------------------------------------|");
             Console.WriteLine("|                                                                                                                      |");
             Console.WriteLine("|                                          E TO [E]XIT THE GAME                                                        |");
             Console.WriteLine("|                                                                                                                      |");
@@ -927,7 +950,7 @@ namespace programmingClassFirstSession
             if (response == "p" || response == "P")
             {
                 //start the game
-                Situation1();
+                return;
             }
             else
             {
@@ -946,9 +969,60 @@ namespace programmingClassFirstSession
                         Menu();
 
                 }
-            }
+            }    
 
         }
+
+
+        static void PauseMenu() // its not functional yet
+        {
+
+            Console.Clear();
+
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("|                                                                                                                      |");
+            Console.WriteLine("|                                             GAME IS PAUSED                                                           |");
+            Console.WriteLine("|                                                                                                                      |");
+            Console.WriteLine("|----------------------------------------------------------------------------------------------------------------------|");
+            Console.WriteLine("|                                                                                                                      |");
+            Console.WriteLine("|                                        R TO [R]RESUME THE GAME                                                       |");
+            Console.WriteLine("|                                                                                                                      |");
+            Console.WriteLine("|----------------------------------------------------------------------------------------------------------------------|");
+            Console.WriteLine("|                                                                                                                      |");
+            Console.WriteLine("|                                          E TO [E]XIT THE GAME                                                        |");
+            Console.WriteLine("|                                                                                                                      |");
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
+
+            response = Console.ReadLine();
+
+            if (response == "r" || response == "R")
+            {
+                //start the game
+                return;
+            }
+            else
+            {
+                // talk to the bug near camp
+                if (response == "e" || response == "E")
+                {
+
+                    //exit the game
+                    Exit();
+                }
+                else //other inputs in
+                {
+
+                    Console.WriteLine("please choose one of the options to play the game!!");
+                    Console.ReadLine();
+                    Menu();
+
+                }
+            }
+
+
+
+        }
+
 
     }
 }

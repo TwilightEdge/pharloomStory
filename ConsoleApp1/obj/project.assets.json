@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\alika\\.nuget\\packages\\": {}
+    "C:\\Users\\Ali\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\uniProjects\\pharloom\\Pharloom\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectUniqueName": "D:\\git\\UniProjects\\pharloomStory\\ConsoleApp1\\ConsoleApp1.csproj",
       "projectName": "ConsoleApp1",
-      "projectPath": "E:\\uniProjects\\pharloom\\Pharloom\\ConsoleApp1\\ConsoleApp1.csproj",
-      "packagesPath": "C:\\Users\\alika\\.nuget\\packages\\",
-      "outputPath": "E:\\uniProjects\\pharloom\\Pharloom\\ConsoleApp1\\obj\\",
+      "projectPath": "D:\\git\\UniProjects\\pharloomStory\\ConsoleApp1\\ConsoleApp1.csproj",
+      "packagesPath": "C:\\Users\\Ali\\.nuget\\packages\\",
+      "outputPath": "D:\\git\\UniProjects\\pharloomStory\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\alika\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
