@@ -1,4 +1,6 @@
-﻿using System.Xml.Linq;
+﻿using System.Runtime.InteropServices;
+using System.Runtime.Intrinsics.X86;
+using System.Xml.Linq;
 
 namespace programmingClassFirstSession
 {
@@ -22,20 +24,27 @@ namespace programmingClassFirstSession
 
         public static bool trained = false;
 
+        public static bool doorOpened = false;
+
+        public static bool haveSkill = false;
+
 
         static void Main(string[] args)
         {
-            Situation1();
+            Menu();
+
+
         }
 
         static void Situation1() //needs update about the locked door
         {
-            //string response;
+            Devider();
 
             Console.WriteLine("you are in dark and mystical lands of Pharloom, do you want to: ");
             Console.WriteLine();
             Console.WriteLine("1_ go explore the bone bottom");
             Console.WriteLine("2_ go down into the Moss Groto");
+            Console.WriteLine("3_ check the big door right beside you");
             response = Console.ReadLine();
 
 
@@ -61,11 +70,30 @@ namespace programmingClassFirstSession
                 }
                 else
                 {
-                    Console.WriteLine("please choose one of the options to play the game!!");
+                    if (response == "3")
+                    {
+                        if (!doorOpened)
+                        {
 
-                    Console.ReadLine();
-                    Situation1();
+                            Situation12();
 
+                        }
+                        else // already openned the door
+                        {
+
+                            Console.WriteLine("you already openned this door!");
+                            Console.ReadLine();
+                            Console.WriteLine("you decide to go back");
+                            Situation1(); // go back to sit 1
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("please choose one of the options to play the game!!");
+
+                        Console.ReadLine();
+                        Situation1();
+                    }
 
                 }
 
@@ -76,7 +104,8 @@ namespace programmingClassFirstSession
 
         static void Situation2()
         {
-            //string response;
+
+            Devider();
 
             Console.WriteLine("you continue down the path in the bone bottom, reaching a small gathering of bugs that seems to be pilgrims");
             Console.WriteLine();
@@ -125,14 +154,12 @@ namespace programmingClassFirstSession
 
         static void Situation3()
         {
+            Devider();
 
-
-
-
-            Console.WriteLine("you head down to the dark and mysterious tunnels of Moss Groto! you hear a bug singing a sharp from bellow and there are lands to explore in your right, where do you go?");
+            Console.WriteLine("you head down to the dark and mysterious tunnels of Moss Groto! you hear a bug singing in a sharp tune from bellow and there are lands to explore in your right, where do you go?");
             Console.WriteLine();
-            Console.WriteLine("1_ go find out where the sound comming from");
-            Console.WriteLine("2_ continue to the right to explore more of moss groto");
+            Console.WriteLine("1_ go find out where the sound is comming from");
+            Console.WriteLine("2_ continue to the right to explore more of Moss Groto");
             Console.WriteLine();
             Console.WriteLine("to go back press [B]ack");
             response = Console.ReadLine();
@@ -179,6 +206,7 @@ namespace programmingClassFirstSession
 
         static void Situation4()
         {
+            Devider();
 
             if (!given500)
             {
@@ -264,6 +292,8 @@ namespace programmingClassFirstSession
 
         static void Situation5()
         {
+            Devider();
+
             if (!haveMap) // you dont have the map
             {
 
@@ -325,12 +355,30 @@ namespace programmingClassFirstSession
 
         }
 
-        static void Situation6() //needs update about paper offering
+        static void Situation6() 
         {
-            //string response;
+            Devider();
 
-            Console.WriteLine("you walk towards a bug singing and making sharp sounds with smashing two golden ring, she introduces herself as Shakra,");
-            Console.WriteLine("a warrior and she tells you that there is a locked door somewhere in the right side of the moss groto");
+            //offers paper!
+
+            if (!havePaper) // if you dont have paper already
+            {
+                Console.WriteLine("you walk towards a bug singing and making sharp sounds with smashing two golden ring, she introduces herself as Shakra,");
+                Console.WriteLine("a warrior and she tells you that she enjoys making maps and have paper to spare if you want some");
+                Console.WriteLine();
+                Console.WriteLine("you aquire paper!");
+                Console.ReadLine();
+                havePaper = true;
+            }
+            else // if you have paper already!
+            {
+
+                Console.WriteLine("I alread gave you my spare paper young warrior");
+                Console.WriteLine("*she smashes the two golden ring again with sharp sound*");
+                Console.WriteLine("may my song be with you");
+
+            }
+
             Console.WriteLine();
             Console.WriteLine("press [B]ack");
 
@@ -356,27 +404,165 @@ namespace programmingClassFirstSession
 
         static void Situation7()
         {
-            
+            Devider();
 
+            Console.WriteLine("you dontinue right in the green lands of Moss groto untill you reach a cross road, you can either:");
+            Console.WriteLine();
+            Console.WriteLine("1_ go inspect what it seems to be a bunch of webs woven together");
+            Console.WriteLine("2_ go down through a hole deeper into the Moss Groto");
+
+            Console.WriteLine();
+            Console.WriteLine("to go back press [B]ack");
+            response = Console.ReadLine();
+
+            if (response == "1")
+            {
+
+                Situation8();
+
+            }
+            else
+            {
+                if (response == "2")
+                {
+                    Situation9();
+                }
+                else
+                {
+                    if (response == "b" || response == "B")
+                    {
+
+                        //go back to bone bottom
+                        Situation3();
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("please choose one of the options to play the game!!");
+                        Console.ReadLine();
+                        Situation7();
+                    }
+
+                }
+
+            }
 
         }
 
-        static void Situation8()
+        static void Situation8() // you approach silk woven together
         {
-           
+            Devider();
 
+            Console.WriteLine("you inspect the interwoven pile of silk more carefully and try to srike it down, but it resist and regenerates fast...");
+            Console.WriteLine("you dont seem to able to cut through, unless you cut deep an all at once?");
+            Console.WriteLine("but with a close inspection, there is also seem to be a very big bug trapped deep inside this interwoven web of silk that is still moving!");
+            Console.WriteLine("...you can help yourself but to think, wow what a beast....");
+
+            Console.WriteLine();
+            Console.WriteLine("1_ cut the silks (requires skill)");
+            
+
+            Console.WriteLine();
+            Console.WriteLine("to go back press [B]ack");
+            response = Console.ReadLine();
+
+            if (response == "1")
+            {
+                if (haveSkill)
+                {
+
+                    Situation13();
+
+                }
+                else // you dont have the skill to cut through
+                {
+
+                    Console.WriteLine("you dont seem to have the skill to cut through!");
+
+                }
+
+            }
+            else
+            {
+                
+                    if (response == "b" || response == "B")
+                    {
+
+                        //go back to bone bottom
+                        Situation7();
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("please choose one of the options to play the game!!");
+                        Console.ReadLine();
+                        Situation8();
+                    }
+
+                
+
+            }
 
         }
 
-        static void Situation9()
+        static void Situation9() // you go down into the hole
         {
-            
 
+            Devider();
+
+            if (!treasureFound) // if you dont have treasure yet
+            {
+
+                if (haveMap) // you can dig the treasure
+                {
+                    treasureFound = true;
+                    haveRosaries = true;
+                    Console.WriteLine("you read the map carefully and after trying a few spots you dig and find a chest full of beads!");
+                    Console.WriteLine();
+                    Console.WriteLine("YOU FOUND 600 ROSARIES!");
+
+                }
+                else // you dont know where the treasure is
+                {
+
+                    Console.WriteLine("you find yourself in a very big underground area, you explore a little but you dont seem to find anything");
+
+                }
+
+
+            }
+            else // if you already have the treasure
+            {
+
+                Console.WriteLine("you already dug the treasure, there doesnt seem to be anything else here");
+
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("to go back press [B]ack");
+            response = Console.ReadLine();
+
+            if (response == "b" || response == "B") //go back to sit 7 **
+            {
+
+               
+                Situation7();
+
+            }
+            else
+            {
+                Console.WriteLine("please choose one of the options to play the game!!");
+                Console.ReadLine();
+                Situation9();
+            }
 
         }
 
         static void Situation10()
         {
+
+            Devider();
+            
             //you already got the map (previous sit 5)
 
             Console.WriteLine("hello again miss spider! I already give you the map didn't I?");
@@ -468,6 +654,8 @@ namespace programmingClassFirstSession
 
         static void Situation11()
         {
+            Devider();
+
             //the warrior asks for the rosaries after releazes you have them
 
             Console.WriteLine("oh you did find it! warrior to warrior promiss, I wont ask you how much you found and you give me my 100 rosaries");
@@ -569,23 +757,156 @@ namespace programmingClassFirstSession
 
         static void Situation12()
         {
-            //string response;
+            Devider();
 
+            //you inteacted with the door
+
+            Console.WriteLine("you check the big door, it appears to be locked with a big silver lock");
+            Console.WriteLine();
+            Console.WriteLine("1_ open the door (requires silver key)");
+            
+            Console.WriteLine();
+            Console.WriteLine("to go back press [B]ack");
+            response = Console.ReadLine();
+
+            if (response == "1")
+            {
+                if(haveKey) //open the door with key
+                {
+
+                    doorOpened = true;
+                    haveSkill = true;
+                    Console.WriteLine("you put the silver key that you got from builder bug in the silver big lock and it opens with a sharp sound");
+                    Console.WriteLine();
+                    Console.WriteLine("inside you see a small dusty dark room with a stature of a weaver inside, you go towards it and interact with it by instinct");
+                    Console.ReadLine();
+                    Console.Write(".");
+                    Console.ReadLine();
+                    Console.Write(".");
+                    Console.ReadLine();
+                    Console.WriteLine(".");
+                    Console.ReadLine();
+                    Console.WriteLine("you aquired a skill! you now can throw your weapon to deal with larg amount of silk!");
+                    Console.ReadLine();
+
+                    Situation1();
+
+                }
+                else // dont have the key
+                {
+
+                    Console.WriteLine("you do not have the key!");
+                    Console.ReadLine();
+                    
+                    Situation12();
+                }
+            }
+            else
+            {
+                // you can go back to sit 1
+                
+
+
+                    if (response == "b" || response == "B")
+                    {
+
+                        //go back to pharloom sit 1
+                        Situation1();
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("please choose one of the options to play the game!!");
+                        Console.ReadLine();
+                        Situation12();
+                    }
+
+                
+            }
 
         }
 
         static void Situation13()
         {
+            Devider();
 
-            //game ending
+            //you cut through the web!
 
+            Console.WriteLine("you cut through the interwoven web of silk with one single thrust of skill of your blade, as it fells apart you see the beast gets free! but instead of any graduation it charges towards you!!!");
+            Console.WriteLine();
+
+            if (trained)
+            {
+
+                Console.WriteLine("thanks to the training you had with the warrior in the bone bottom your body moves on its own!");
+                Console.WriteLine("you jump in the air and dodge the beast charge at you, and as it passes you you throw yourself at it backwards and struck the beast diagnolly with your blade!");
+                Console.ReadLine();
+                Console.WriteLine();
+                Console.WriteLine("you then watch the beast calming down, as if its respecting you now? it even pounds the ground with its feet to sygnal something at you!");
+                Console.WriteLine("you mount the beast as it then goes into the ground and you say goodbye to pharloom for now!");
+                Console.WriteLine();
+                Console.WriteLine("VICTORY!!!");
+
+                Exit();
+
+            }
+            else // you are rusty - death!
+            {
+
+                Console.WriteLine("you can't seem to believe the beast charging at you right after you freed from that nasty web of silk! your body freez as the giant beast hits you...");
+                Console.WriteLine(".");
+                Console.ReadLine();
+                Console.WriteLine("and slowly");
+                Console.WriteLine(".");
+                Console.ReadLine();
+                Console.WriteLine("everything fades to black");
+                Console.WriteLine(".");
+                Console.ReadLine();
+                Console.WriteLine();
+                Console.WriteLine("YOU DIE!");
+                Console.ReadLine();
+
+                Exit();
+
+            }
             
+
+
 
         }
 
         static void Exit()
         {            
             Environment.Exit(0);
+        }
+
+        static void Devider()
+        {
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine();
+            return;
+        }
+
+        static void Menu() // its not functional yet
+        {
+
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("|                                                                                                                      |");
+            Console.WriteLine("|                                          WELCOME TO SILK MUSIC!                                                      |");
+            Console.WriteLine("|                                                                                                                      |");
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("|                                                                                                                      |");
+            Console.WriteLine("|                                          P TO [P]LAY THE GAME                                                        |");
+            Console.WriteLine("|                                                                                                                      |");
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("|                                                                                                                      |");
+            Console.WriteLine("|                                          E TO [E]XIT THE GAME                                                        |");
+            Console.WriteLine("|                                                                                                                      |");
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
+
+            response = Console.ReadLine();
+
+
         }
 
     }
