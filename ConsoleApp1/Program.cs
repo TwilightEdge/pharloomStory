@@ -882,6 +882,7 @@ namespace programmingClassFirstSession
 
         static void Devider()
         {
+            Console.Clear();
             Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
             Console.WriteLine();
             return;
@@ -906,6 +907,29 @@ namespace programmingClassFirstSession
 
             response = Console.ReadLine();
 
+            if (response == "p" || response == "P")
+            {
+                //start the game
+                Situation1();
+            }
+            else
+            {
+                // talk to the bug near camp
+                if (response == "e" || response == "E")
+                {
+
+                    //exit the game
+                    Exit();
+                }
+                else //other inputs in
+                {
+
+                        Console.WriteLine("please choose one of the options to play the game!!");
+                        Console.ReadLine();
+                        Menu();
+
+                }
+            }
 
         }
 
