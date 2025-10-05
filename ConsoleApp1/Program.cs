@@ -31,8 +31,8 @@ namespace programmingClassFirstSession
 
         static void Main(string[] args)
         {
-            Menu();
 
+            Menu();
 
         }
 
@@ -99,7 +99,7 @@ namespace programmingClassFirstSession
 
 
             }
-            Console.ReadLine();
+            
         }
 
         static void Situation2()
@@ -107,7 +107,7 @@ namespace programmingClassFirstSession
 
             Devider();
 
-            Console.WriteLine("you continue down the path in the bone bottom, reaching a small gathering of bugs that seems to be pilgrims");
+            Console.WriteLine("you continue down the path in the Bone Bottom, reaching a small gathering of bugs that seems to be pilgrims");
             Console.WriteLine();
             Console.WriteLine("1_ talk to the bug with a hammer in hand");
             Console.WriteLine("2_ talk to the bug sitting on what apears to be a camp lamp");
@@ -222,14 +222,19 @@ namespace programmingClassFirstSession
                 {
                     if (haveRosaries == true)
                     {
-                        //vin con
+                        // get key
 
+                        haveKey = true;
                         Console.WriteLine("ayy now I can rebuild bone bottoom for the new pilgrims! thanks miss spider!!");
                         Console.WriteLine();
                         Console.WriteLine("here, let me give you a token of my gratitude for what you did for all the pilgrims that would come in the future:");
                         Console.WriteLine();
                         Console.WriteLine("YOU GOT A SILVER KEY!");
                         Console.ReadLine();
+                        Console.WriteLine("you go back");
+                        Console.ReadLine();
+
+                        Situation2();
 
                     }
                     else
@@ -267,7 +272,7 @@ namespace programmingClassFirstSession
             else //gave 500 already
             {
 
-                Console.WriteLine("thank you again so much for your kind donation miss spider!");
+                Console.WriteLine("thank you again so much for your kind donation miss!");
                 Console.WriteLine();
                 Console.WriteLine("to go back press [B]ack");
                 response = Console.ReadLine();
@@ -299,7 +304,7 @@ namespace programmingClassFirstSession
 
                 Console.WriteLine("you start talking to a bug sitting on a camp fire that appear to be a warrior and they tell you about a treasure hidden somewhere down there");
                 Console.WriteLine();
-                Console.WriteLine("hey! I would tell you the exact location but I need to draw you a map and I dont have paper! but if you found it you have to pay me 100 rosaries what ever it was! I trust you!");
+                Console.WriteLine("hey! I would tell you the exact location but I need to draw you a map and I dont have paper! but if you found it you have to pay me 100 rosaries! deal?");
                 Console.WriteLine();
                 Console.WriteLine("1_ accept the deal and give the bug a paper! (requie paper)");
 
@@ -318,10 +323,19 @@ namespace programmingClassFirstSession
                         Console.WriteLine();
                         Console.WriteLine("you got a map!!! you look the spot they draw on the map");
                         Console.WriteLine("it should be the right side of the Moss Groto, way down!");
+
+                        Console.ReadLine();
+
+                        Console.WriteLine("you go back to Bone Bottom");
+
+                        Console.ReadLine();
+                        Situation2();
                     }
-                    else
+                    else // have the map
                     {
                         Console.WriteLine("you do not have the paper miss spider!");
+                        Console.ReadLine();
+
                         Situation5();
                     }
 
@@ -406,7 +420,7 @@ namespace programmingClassFirstSession
         {
             Devider();
 
-            Console.WriteLine("you dontinue right in the green lands of Moss groto untill you reach a cross road, you can either:");
+            Console.WriteLine("you continue right in the green lands of Moss groto until you reach a cross road, you can either:");
             Console.WriteLine();
             Console.WriteLine("1_ go inspect what it seems to be a bunch of webs woven together");
             Console.WriteLine("2_ go down through a hole deeper into the Moss Groto");
@@ -456,7 +470,7 @@ namespace programmingClassFirstSession
             Console.WriteLine("you inspect the interwoven pile of silk more carefully and try to srike it down, but it resist and regenerates fast...");
             Console.WriteLine("you dont seem to able to cut through, unless you cut deep an all at once?");
             Console.WriteLine("but with a close inspection, there is also seem to be a very big bug trapped deep inside this interwoven web of silk that is still moving!");
-            Console.WriteLine("...you can help yourself but to think, wow what a beast....");
+            Console.WriteLine("...you can't help yourself but to think, wow what a beast....");
 
             Console.WriteLine();
             Console.WriteLine("1_ cut the silks (requires skill)");
@@ -478,6 +492,8 @@ namespace programmingClassFirstSession
                 {
 
                     Console.WriteLine("you dont seem to have the skill to cut through!");
+                    Console.ReadLine();
+                    Situation8();
 
                 }
 
@@ -672,7 +688,7 @@ namespace programmingClassFirstSession
 
                 given100 = true;
                 Console.WriteLine("wow you kept your promiss, color me impressed!");
-                Console.WriteLine("as a warrior I already know youre a great deal, but youre a little rusty arent you? or maybe there is something wrong with you? lets duel, Ill teach you some nail arts too!");
+                Console.WriteLine("as a warrior I already know youre a great deal, but youre a little rusty arent you? or maybe there is something wrong with you? lets duel, Ill teach you some moves too!");
                 trained = true;
                 Console.WriteLine(".");
                 Console.ReadLine();
@@ -680,9 +696,9 @@ namespace programmingClassFirstSession
                 Console.ReadLine();
                 Console.WriteLine(".");
                 Console.ReadLine();
-                Console.WriteLine("you two spend some time training, and you learned a new nail art!");
+                Console.WriteLine("you two spend some time training, and you feel your body became more prepared!");
                 Console.WriteLine();
-                Console.WriteLine("off you go miss spider! I know that whatever is going to be your goal here in oharlkoom, you can achieve it!");
+                Console.WriteLine("off you go miss spider! I know that whatever is going to be your goal here in pharloom, you can achieve it!");
                 Console.WriteLine();
 
                 Console.WriteLine("to go back press [B]ack");
@@ -883,6 +899,7 @@ namespace programmingClassFirstSession
         static void Devider()
         {
             Console.Clear();
+            Console.WriteLine();
             Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
             Console.WriteLine();
             return;
