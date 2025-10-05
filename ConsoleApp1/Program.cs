@@ -29,11 +29,12 @@ namespace programmingClassFirstSession
         public static bool haveSkill = false;
 
 
-        static void Main(string[] args)
+        static void Main()
         {
 
             Menu();
             Situation1();
+            
         }
 
         static void Situation1() 
@@ -45,6 +46,11 @@ namespace programmingClassFirstSession
             Console.WriteLine("1_ go explore the bone bottom");
             Console.WriteLine("2_ go down into the Moss Groto");
             Console.WriteLine("3_ check the big door right beside you");
+
+            Console.WriteLine();
+            Console.WriteLine("to access menu press [M]enu");
+            Console.WriteLine();
+
             response = Console.ReadLine();
 
 
@@ -125,6 +131,11 @@ namespace programmingClassFirstSession
             Console.WriteLine("2_ talk to the bug sitting on what apears to be a camp lamp");
             Console.WriteLine();
             Console.WriteLine("to go back press [B]ack");
+
+            Console.WriteLine();
+            Console.WriteLine("to access menu press [M]enu");
+            Console.WriteLine();
+
             response = Console.ReadLine();
 
             if (response == "1")
@@ -154,9 +165,21 @@ namespace programmingClassFirstSession
                     }
                     else
                     {
-                        Console.WriteLine("please choose one of the options to play the game!!");
-                        Console.ReadLine();
-                        Situation2();
+                        if (response == "m" || response == "M")
+                        {
+
+                            PauseMenu();
+                            Situation2();
+
+                        }
+                        else
+                        {
+
+
+                            Console.WriteLine("please choose one of the options to play the game!!");
+                            Console.ReadLine();
+                            Situation2();
+                        }
                     }
 
                 }
@@ -174,6 +197,11 @@ namespace programmingClassFirstSession
             Console.WriteLine("2_ continue to the right to explore more of Moss Groto");
             Console.WriteLine();
             Console.WriteLine("to go back press [B]ack");
+
+            Console.WriteLine();
+            Console.WriteLine("to access menu press [M]enu");
+            Console.WriteLine();
+
             response = Console.ReadLine();
 
             if (response == "1")
@@ -206,9 +234,21 @@ namespace programmingClassFirstSession
                     }
                     else
                     {
-                        Console.WriteLine("please choose one of the options to play the game!!");
-                        Console.ReadLine();
-                        Situation3();
+                        if (response == "m" || response == "M")
+                        {
+
+                            PauseMenu();
+                            Situation3();
+
+                        }
+                        else
+                        {
+
+                            Console.WriteLine("please choose one of the options to play the game!!");
+                            Console.ReadLine();
+                            Situation3();
+
+                        }
                     }
                 }
             }
@@ -228,6 +268,11 @@ namespace programmingClassFirstSession
 
                 Console.WriteLine();
                 Console.WriteLine("to go back press [B]ack");
+
+                Console.WriteLine();
+                Console.WriteLine("to access menu press [M]enu");
+                Console.WriteLine();
+
                 response = Console.ReadLine();
 
                 if (response == "1")
@@ -273,9 +318,21 @@ namespace programmingClassFirstSession
                     }
                     else
                     {
-                        Console.WriteLine("please choose one of the options to play the game!!");
-                        Console.ReadLine();
-                        Situation4();
+
+                        if (response == "m" || response == "M")
+                        {
+
+                            PauseMenu();
+                            Situation4();
+
+                        }
+                        else
+                        {
+
+                            Console.WriteLine("please choose one of the options to play the game!!");
+                            Console.ReadLine();
+                            Situation4();
+                        }
                     }
 
                 }
@@ -287,6 +344,11 @@ namespace programmingClassFirstSession
                 Console.WriteLine("thank you again so much for your kind donation miss!");
                 Console.WriteLine();
                 Console.WriteLine("to go back press [B]ack");
+
+                Console.WriteLine();
+                Console.WriteLine("to access menu press [M]enu");
+                Console.WriteLine();
+
                 response = Console.ReadLine();
 
                 if (response == "b" || response == "B")
@@ -298,9 +360,19 @@ namespace programmingClassFirstSession
                 }
                 else
                 {
-                    Console.WriteLine("please choose one of the options to play the game!!");
-                    Console.ReadLine();
-                    Situation4();
+                    if (response == "m" || response == "M")
+                    {
+
+                        PauseMenu();
+                        Situation4();
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("please choose one of the options to play the game!!");
+                        Console.ReadLine();
+                        Situation4();
+                    }
                 }
 
             }
@@ -322,6 +394,11 @@ namespace programmingClassFirstSession
 
                 Console.WriteLine();
                 Console.WriteLine("to go back press [B]ack");
+
+                Console.WriteLine();
+                Console.WriteLine("to access menu press [M]enu");
+                Console.WriteLine();
+
                 response = Console.ReadLine();
 
                 if (response == "1")
@@ -365,9 +442,21 @@ namespace programmingClassFirstSession
                     }
                     else
                     {
-                        Console.WriteLine("please choose one of the options to play the game!!");
-                        Console.ReadLine();
-                        Situation5();
+
+                        if (response == "m" || response == "M")
+                        {
+
+                            PauseMenu();
+                            Situation5();
+
+                        }
+                        else
+                        {
+
+                            Console.WriteLine("please choose one of the options to play the game!!");
+                            Console.ReadLine();
+                            Situation5();
+                        }
                     }
 
                 }
@@ -408,6 +497,10 @@ namespace programmingClassFirstSession
             Console.WriteLine();
             Console.WriteLine("press [B]ack");
 
+            Console.WriteLine();
+            Console.WriteLine("to access menu press [M]enu");
+            Console.WriteLine();
+
             response = Console.ReadLine();
 
 
@@ -421,9 +514,21 @@ namespace programmingClassFirstSession
             }
             else
             {
-                Console.WriteLine("please choose one of the options to play the game!!");
-                Console.ReadLine();
-                Situation6();
+
+                if (response == "m" || response == "M")
+                {
+
+                    PauseMenu();
+                    Situation6();
+
+                }
+                else
+                {
+
+                    Console.WriteLine("please choose one of the options to play the game!!");
+                    Console.ReadLine();
+                    Situation6();
+                }
             }
 
         }
@@ -439,6 +544,11 @@ namespace programmingClassFirstSession
 
             Console.WriteLine();
             Console.WriteLine("to go back press [B]ack");
+
+            Console.WriteLine();
+            Console.WriteLine("to access menu press [M]enu");
+            Console.WriteLine();
+
             response = Console.ReadLine();
 
             if (response == "1")
@@ -464,9 +574,20 @@ namespace programmingClassFirstSession
                     }
                     else
                     {
-                        Console.WriteLine("please choose one of the options to play the game!!");
-                        Console.ReadLine();
-                        Situation7();
+                        if (response == "m" || response == "M")
+                        {
+
+                            PauseMenu();
+                            Situation7();
+
+                        }
+                        else
+                        {
+
+                            Console.WriteLine("please choose one of the options to play the game!!");
+                            Console.ReadLine();
+                            Situation7();
+                        }
                     }
 
                 }
@@ -490,6 +611,11 @@ namespace programmingClassFirstSession
 
             Console.WriteLine();
             Console.WriteLine("to go back press [B]ack");
+
+            Console.WriteLine();
+            Console.WriteLine("to access menu press [M]enu");
+            Console.WriteLine();
+
             response = Console.ReadLine();
 
             if (response == "1")
@@ -512,20 +638,32 @@ namespace programmingClassFirstSession
             }
             else
             {
-                
-                    if (response == "b" || response == "B")
+
+                if (response == "b" || response == "B")
+                {
+
+                    //go back to bone bottom
+                    Situation7();
+
+                }
+                else
+                {
+                    if (response == "m" || response == "M")
                     {
 
-                        //go back to bone bottom
-                        Situation7();
+                        PauseMenu();
+                        Situation8();
 
                     }
                     else
                     {
+
+
                         Console.WriteLine("please choose one of the options to play the game!!");
                         Console.ReadLine();
                         Situation8();
                     }
+                }
 
                 
 
@@ -568,6 +706,11 @@ namespace programmingClassFirstSession
 
             Console.WriteLine();
             Console.WriteLine("to go back press [B]ack");
+
+            Console.WriteLine();
+            Console.WriteLine("to access menu press [M]enu");
+            Console.WriteLine();
+
             response = Console.ReadLine();
 
             if (response == "b" || response == "B") //go back to sit 7 **
@@ -579,9 +722,20 @@ namespace programmingClassFirstSession
             }
             else
             {
-                Console.WriteLine("please choose one of the options to play the game!!");
-                Console.ReadLine();
-                Situation9();
+                if (response == "m" || response == "M")
+                {
+
+                    PauseMenu();
+                    Situation9();
+
+                }
+                else
+                {
+
+                    Console.WriteLine("please choose one of the options to play the game!!");
+                    Console.ReadLine();
+                    Situation9();
+                }
             }
 
         }
@@ -604,6 +758,11 @@ namespace programmingClassFirstSession
 
                 Console.WriteLine();
                 Console.WriteLine("to go back press [B]ack");
+
+                Console.WriteLine();
+                Console.WriteLine("to access menu press [M]enu");
+                Console.WriteLine();
+
                 response = Console.ReadLine();
 
                 if (response == "1")
@@ -643,9 +802,20 @@ namespace programmingClassFirstSession
                         }
                         else
                         {
-                            Console.WriteLine("please choose one of the options to play the game!!");
-                            Console.ReadLine();
-                            Situation5();
+                            if (response == "m" || response == "M")
+                            {
+
+                                PauseMenu();
+                                Situation10();
+
+                            }
+                            else
+                            {
+
+                                Console.WriteLine("please choose one of the options to play the game!!");
+                                Console.ReadLine();
+                                Situation10();
+                            }
                         }
                     }
 
@@ -672,9 +842,20 @@ namespace programmingClassFirstSession
                 }
                 else
                 {
-                    Console.WriteLine("please choose one of the options to play the game!!");
-                    Console.ReadLine();
-                    Situation10();
+                    if (response == "m" || response == "M")
+                    {
+
+                        PauseMenu();
+                        Situation10();
+
+                    }
+                    else
+                    {
+
+                        Console.WriteLine("please choose one of the options to play the game!!");
+                        Console.ReadLine();
+                        Situation10();
+                    }
                 }
 
             }
@@ -714,6 +895,11 @@ namespace programmingClassFirstSession
                 Console.WriteLine();
 
                 Console.WriteLine("to go back press [B]ack");
+
+                Console.WriteLine();
+                Console.WriteLine("to access menu press [M]enu");
+                Console.WriteLine();
+
                 response = Console.ReadLine();
 
                 if (response == "b" || response == "B")
@@ -725,9 +911,20 @@ namespace programmingClassFirstSession
                 }
                 else
                 {
-                    Console.WriteLine("please choose one of the options to play the game!!");
-                    Console.ReadLine();
-                    Situation10();
+                    if (response == "m" || response == "M")
+                    {
+
+                        PauseMenu();
+                        Situation10();
+
+                    }
+                    else
+                    {
+
+                        Console.WriteLine("please choose one of the options to play the game!!");
+                        Console.ReadLine();
+                        Situation10();
+                    }
                 }
 
                 
@@ -760,7 +957,7 @@ namespace programmingClassFirstSession
                     Console.WriteLine("and you die");
                     Console.ReadLine();
 
-                    Exit();
+                    Restart();
                 }
                 else
                 {
@@ -773,9 +970,20 @@ namespace programmingClassFirstSession
                     }
                     else
                     {
-                        Console.WriteLine("please choose one of the options to play the game!!");
-                        Console.ReadLine();
-                        Situation5();
+                        if (response == "m" || response == "M")
+                        {
+
+                            PauseMenu();
+                            Situation10();
+
+                        }
+                        else
+                        {
+
+                            Console.WriteLine("please choose one of the options to play the game!!");
+                            Console.ReadLine();
+                            Situation10();
+                        }
                     }
                 }
 
@@ -795,6 +1003,11 @@ namespace programmingClassFirstSession
             
             Console.WriteLine();
             Console.WriteLine("to go back press [B]ack");
+
+            Console.WriteLine();
+            Console.WriteLine("to access menu press [M]enu");
+            Console.WriteLine();
+
             response = Console.ReadLine();
 
             if (response == "1")
@@ -832,22 +1045,34 @@ namespace programmingClassFirstSession
             else
             {
                 // you can go back to sit 1
-                
 
 
-                    if (response == "b" || response == "B")
+
+                if (response == "b" || response == "B")
+                {
+
+                    //go back to pharloom sit 1
+                    Situation1();
+
+                }
+                else
+                {
+
+                    if (response == "m" || response == "M")
                     {
 
-                        //go back to pharloom sit 1
-                        Situation1();
+                        PauseMenu();
+                        Situation12();
 
                     }
                     else
                     {
+
                         Console.WriteLine("please choose one of the options to play the game!!");
                         Console.ReadLine();
                         Situation12();
                     }
+                }
 
                 
             }
@@ -872,10 +1097,12 @@ namespace programmingClassFirstSession
                 Console.WriteLine();
                 Console.WriteLine("you then watch the beast calming down, as if its respecting you now? it even pounds the ground with its feet to sygnal something at you!");
                 Console.WriteLine("you mount the beast as it then goes into the ground and you say goodbye to pharloom for now!");
-                Console.WriteLine();
-                Console.WriteLine("VICTORY!!!");
 
-                Exit();
+                Console.ReadLine();
+
+                VictoryScreen();
+
+                
 
             }
             else // you are rusty - death!
@@ -894,7 +1121,7 @@ namespace programmingClassFirstSession
                 Console.WriteLine("YOU DIE!");
                 Console.ReadLine();
 
-                Exit();
+                Restart();
 
             }
             
@@ -919,11 +1146,32 @@ namespace programmingClassFirstSession
 
         static void Restart()
         {
-            Console.Clear();
-            Console.WriteLine();
-            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
-            Console.WriteLine();
-            return;
+
+            response = "0";
+
+            haveRosaries = false;
+
+            havePaper = false;
+
+            haveMap = false;
+
+            treasureFound = false;
+
+            given100 = false;
+
+            haveKey = false;
+
+            given500 = false;
+
+            trained = false;
+
+            doorOpened = false;
+
+            haveSkill = false;
+
+            Main();
+
+
         }
 
         static void Menu() // its not functional yet
@@ -1020,6 +1268,36 @@ namespace programmingClassFirstSession
             }
 
 
+
+        }
+
+        static void VictoryScreen()
+        {
+
+            Console.Clear();
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("|                                                                                                                      |");
+            Console.WriteLine("|                                                 CONGRATOLATIONS!                                                     |");
+            Console.WriteLine("|                                                                                                                      |");
+            Console.WriteLine("|                                                                                                                      |");
+            Console.WriteLine("|                                                 YOU BEAT THE GAME!                                                   |");
+            Console.WriteLine("|                                                                                                                      |");
+            Console.WriteLine("|                                                                                                                      |");
+            Console.WriteLine("|                                          I HOPE YOU ENJOYED YOUR TIME :)                                             |");
+            Console.WriteLine("|                                                                                                                      |");
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
+
+            Console.ReadLine();
+
+            Exit();
 
         }
 
